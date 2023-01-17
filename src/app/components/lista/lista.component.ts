@@ -18,7 +18,7 @@ export class ListaComponent implements OnInit {
     this.usuariosService.getUsers().subscribe(
       resultado => {
         this.usuarios = resultado; //si todo es correcto, guarda la data en el array usuarios
-        this.Mostrar = true; //Mostrar la lista
+        this.Mostrar = !this.Mostrar; //Mostrar la lista
       },
       error => {
         console.log(error); //en caso de error, imprimirlo en consola
